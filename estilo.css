@@ -10,6 +10,11 @@ body {
     padding-top: 78px;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
 /* estilo del encabezado */
 header {
     position: fixed;
@@ -23,6 +28,11 @@ header {
     padding: 20px;
     background-color: #756AB6;
     color: white;
+}
+@media (max-width: 480px) {
+    header{
+        position: relative;
+    }
 }
 
 /* estilo del nombre */
@@ -61,6 +71,7 @@ header {
 /* Secciones, estilo general */
 .seccion {
     height: auto;
+    width: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -72,6 +83,24 @@ header {
 
 
 
+
+@media (max-width: 480px) {
+    #acerca {
+        flex-direction: column; /* Apilar todo en una columna */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    #acerca_texto, #acerca_imagen {
+        width: 100%; /* Hacer que ambos ocupen todo el ancho */
+        text-align: center; /* Centrar el texto y la imagen */
+    }
+
+    #foto_perfil {
+        width: 150px; /* Ajustar el tamaño de la imagen en pantallas pequeñas */
+        height: 150px;
+    }
+}
+
 /* seccion: Acerca de mí */
 #acerca {
     min-height: 360px;
@@ -79,6 +108,8 @@ header {
     display: flex;
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%; /* Asegúrate de que no se desborde */
+    box-sizing: border-box;
 }
 
 #acerca h2{
@@ -95,17 +126,17 @@ header {
 
 #acerca_texto{
     width: 50%;
-    display:flexbox;
 }
 
 #acerca_imagen{
     width: 35%;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     
 }
 
 #foto_perfil{
+    max-width: 95%;
     width: 250px;
     height: 250px;
     border-radius: 50%; /* Hace que la imagen sea circular */
@@ -201,10 +232,13 @@ header {
 
 
 /* seccion: Proyectos */
+
+
 #proyectos {
     background-color: #FFE5E5;
     height: auto;
     padding: 40px;
+    width: 100%;
 }
 
 #proyectos h2{
@@ -232,10 +266,24 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
     width: 31%; /* tamaño de las cajas */
     display: flex;
+    flex-basis: auto;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    .proyectos-contenedor {
+        flex-direction: column; /* Coloca las cajas una debajo de la otra */
+        align-items: center; /* Centrarlas */
+        padding: 0 10px; /* Espaciado en los lados */
+        width: 100%;
+    }
+
+    .proyecto {
+        width: 90%; /* Ancho ajustado para pantallas pequeñas */
+    }
 }
 
 .proyecto-img {
@@ -341,6 +389,18 @@ header {
 
 
 /* seccion: Contacto */
+@media (max-width: 768px) {
+    .contacto-contenedor {
+        flex-direction: column; /* Apilar en columna */
+        align-items: center; /* Centrar las cajas */
+    }
+
+    .caja, .formulario {
+        width: 100%; /* Que ocupen todo el ancho del contenedor */
+    }
+}
+
+
 #contacto {
     position: relative; /* asegura que el contenido esté en una capa superior */
     color: black;
@@ -372,7 +432,7 @@ header {
     justify-content: space-between;
     gap: 30px; /* espacio entre las cajas */
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto; /* centra el contenedor */
     padding: 10px;
 }
@@ -407,7 +467,7 @@ header {
 
 .formulario{
     flex-basis: 350px;
-    min-width: 350px;
+    min-width: 200px;
     max-width: 500px;
 }
 
