@@ -467,8 +467,8 @@ header {
 
 .formulario{
     flex-basis: 350px;
-    min-width: 200px;
-    max-width: 500px;
+    /* min-width: 200px; */
+    max-width: 100%;
 }
 
 .formulario label {
