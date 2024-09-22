@@ -38,9 +38,12 @@ header {
 
 /* estilo del nombre */
 .logo h1 {
-    font-size: 26px;
+    font-size: 30px;
     color: #FFE5E5;
-    font-weight:normal;
+    font-weight:bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    margin: 0px;
+    padding: 3px;
 }
 
 /* estilo del menu */
@@ -58,14 +61,14 @@ header {
     padding: 10px;
     text-decoration:none;
     color: white;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .menu a:hover {
     color: #3A1078;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 
@@ -90,6 +93,7 @@ header {
 
 .icono-mundo:hover {
     opacity: 0.6; /* Efecto al pasar el mouse */
+    color: #3A1078;
 }
 
 @media (max-width: 480px) {
@@ -101,17 +105,17 @@ header {
 
 @media (max-width: 480px) {
     #acerca {
-        flex-direction: column; /* Apilar todo en una columna */
-        align-items: center; /* Centrar los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     #acerca_texto, #acerca_imagen {
-        width: 100%; /* Hacer que ambos ocupen todo el ancho */
-        text-align: center; /* Centrar el texto y la imagen */
+        width: 100%; 
+        text-align: center; 
     }
 
     #foto_perfil {
-        width: 150px; /* Ajustar el tamaño de la imagen en pantallas pequeñas */
+        width: 150px; 
         height: 150px;
     }
 }
@@ -128,15 +132,17 @@ header {
 }
 
 #acerca h2{
-    font-family: Georgia, serif;
-    font-size: 30px;
+    font-family: Georgia, Garamond, serif;
+    font-weight: 1000;
+    font-size: 32px;
     margin-bottom: 20px;
     color:#4F1787;
 }
 
 #acerca p{
-    font-size: 17px;
+    font-size: 18px;
     margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #acerca_texto{
@@ -198,24 +204,25 @@ header {
     margin-top: 10px;
     font-size: 20px;
     text-decoration: underline;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #AC87C5;
+    font-weight: 600;
 }
 
 #estudios li{
     list-style-type:disc;
     list-style-position: inside;
-    margin-top: 15px;
+    margin-top: 14px;
     margin-bottom: 2px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .subtitulo{
-    font-size: 15px;
+    font-size: 18px;
     font-style: italic;
     text-indent: 4px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -227,6 +234,8 @@ header {
     flex-direction: column;
     height: auto;
     color: #F1EAFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
 #aptitudes h2{
@@ -265,6 +274,8 @@ header {
 
 #proyectos>p{
     color: #756AB6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
 .proyectos-contenedor {
