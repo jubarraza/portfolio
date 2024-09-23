@@ -1,23 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    document.getElementById('form-contacto').addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita que se recargue la página al enviar el formulario
+    document.getElementById('form-contacto').addEventListener('submit', function (event) {
+        event.preventDefault(); // evita que se recargue la página
 
-        // Cargar los datos del formulario
+        // cargar de datos del form
         const formData = {
             nombre: document.getElementById('nombre').value,
             email: document.getElementById('email').value,
             asunto: document.getElementById('asunto').value,
         };
 
-        // Enviar el formulario a través de EmailJS
+        // enviar el formulario con EmailJS
         emailjs.send('service_u0fr5ec', 'template_glezl2p', formData)
-            .then(function(response) {
+
+            //manejo de respuesta
+            .then(function (response) {
                 console.log('Correo enviado con éxito', response.status, response.text);
                 alert('El mensaje fue enviado con éxito.');
-            }, function(error) {
+            }, function (error) {
                 console.log('Falló el envío', error);
                 alert('Hubo un error al enviar el mensaje.');
             });
+    });
+
+    // ajustar el padding-top dinamicamente
+    const header = document.querySelector('header');
+    const secciones = document.querySelectorAll('.seccion');
+
+    function actualizarPaddingTop() {
+        const headerHeight = header.offsetHeight + 5; //obtiene altura del header
+        secciones.forEach(function(seccion) {
+            seccion.style.paddingTop = headerHeight + 'px';//Aplica al padding-top
+        });
+    }
+
+    //ejecuta la función al cargar la pagina con un delay (para que termine de cargar)
+    setTimeout(actualizarPaddingTop, 100); 
+
+    //si cambia el tamaño de la ventana, recalcula la altura
+    window.addEventListener('resize', actualizarPaddingTop);
+
+    //actualiza el padding-top tambien cuando se hace clic en el menú
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            actualizarPaddingTop(); 
+        });
     });
 });
