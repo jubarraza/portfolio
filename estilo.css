@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
-    padding: 20px;
+    padding: 15px;
     background-color: #756AB6;
     color: white;
 }
@@ -61,7 +61,6 @@ header {
 
 .menu a {
     display: block;
-    margin-right: 8px;
     padding: 8px;
     text-decoration:none;
     color: white;
@@ -85,7 +84,6 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* scroll-margin-top: 78px; */
 }
 
 .icono-mundo {
@@ -95,8 +93,7 @@ header {
 }
 
 .icono-mundo:hover {
-    opacity: 0.6; /* Efecto al pasar el mouse */
-    color: #3A1078;
+    opacity: 0.6; /* transparecia al pasar el mouse*/
 }
 
 @media (max-width: 480px) {
@@ -130,7 +127,7 @@ header {
     display: flex;
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 100%; /* Asegúrate de que no se desborde */
+    max-width: 100%; 
     box-sizing: border-box;
 }
 
@@ -257,10 +254,7 @@ header {
 
 
 
-
 /* seccion: Proyectos */
-
-
 #proyectos {
     background-color: #FFE5E5;
     height: auto;
@@ -284,7 +278,7 @@ header {
 .proyectos-contenedor {
     display: flex;
     justify-content: space-between; /* espacio entre las cajas */
-    flex-wrap: wrap; /* para que las cajas se acomoden en varias filas si no entran en una sola */
+    flex-wrap: wrap; /* para que las cajas se acomoden en varias filas */
     gap: 20px; 
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -292,7 +286,7 @@ header {
 .proyecto {
     background-color: #AC87C5;
     border-radius: 10px; /* borde redondo */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* sombra */
     width: 31%; /* tamaño de las cajas */
     display: flex;
     flex-basis: auto;
@@ -304,14 +298,14 @@ header {
 
 @media (max-width: 480px) {
     .proyectos-contenedor {
-        flex-direction: column; /* Coloca las cajas una debajo de la otra */
-        align-items: center; /* Centrarlas */
-        padding: 0 10px; /* Espaciado en los lados */
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px; /* espaciado en los lados */
         width: 100%;
     }
 
     .proyecto {
-        width: 90%; /* Ancho ajustado para pantallas pequeñas */
+        width: 90%; /* ancho ajustado para pantallas pequeñas */
     }
 }
 
@@ -420,12 +414,12 @@ header {
 /* seccion: Contacto */
 @media (max-width: 768px) {
     .contacto-contenedor {
-        flex-direction: column; /* Apilar en columna */
-        align-items: center; /* Centrar las cajas */
+        flex-direction: column; 
+        align-items: center;
     }
 
     .caja, .formulario {
-        width: 100%; /* Que ocupen todo el ancho del contenedor */
+        width: 100%; 
     }
 }
 
@@ -496,7 +490,6 @@ header {
 
 .formulario{
     flex-basis: 350px;
-    /* min-width: 200px; */
     max-width: 100%;
 }
 
