@@ -7,7 +7,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* padding-top: 78px; */
 }
 
 html, body {
@@ -72,8 +71,7 @@ header {
 
 .menu a:hover {
     color: #3A1078;
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 

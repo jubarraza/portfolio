@@ -29,12 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function actualizarPaddingTop() {
         const headerHeight = header.offsetHeight + 5; //obtiene altura del header
+        
         secciones.forEach(function(seccion) {
             seccion.style.paddingTop = headerHeight + 'px';//Aplica al padding-top
         });
     }
 
-    //ejecuta la función al cargar la pagina con un delay (para que termine de cargar)
+    //ejecuta la función al cargar la pagina con un delay de 100 milisegundos (para que termine de cargar)
     setTimeout(actualizarPaddingTop, 100); 
 
     //si cambia el tamaño de la ventana, recalcula la altura
