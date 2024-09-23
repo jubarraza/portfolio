@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // ajustar el padding-top dinamicamente
     const header = document.querySelector('header');
     const secciones = document.querySelectorAll('.seccion');
+    const navLinks = document.querySelectorAll('nav.menu a'); 
+
 
     function actualizarPaddingTop() {
         const headerHeight = header.offsetHeight + 5; //obtiene altura del header
@@ -40,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //si cambia el tamaño de la ventana, recalcula la altura
     window.addEventListener('resize', actualizarPaddingTop);
+
+    //recalcula el padding-top al cambiar la orientación del celu
+    window.addEventListener('orientationchange', actualizarPaddingTop);
 
     //actualiza el padding-top tambien cuando se hace clic en el menú
     navLinks.forEach(function(link) {
